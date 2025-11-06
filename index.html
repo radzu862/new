@@ -2,14 +2,51 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Flight Fuel Flow Analysis</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 40px;
+    }
+    .image-row {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+    .image-container {
+      width: 48%;
+    }
+    .image-container img {
+      width: 70%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+  </style>
 </head>
-<body style="font-family: sans-serif; margin: 40px;">
-  <h1>Flight Fuel Flow Analysis</h1>
+<body>
+  <h1>Fuel Flow Analysis</h1>
   <p>Flight A320 from Paris (LBG) to Stockholm (BMA).</p>
 
-  <h2>Altitude graph</h2>
-  <img src="altitude.png" alt="Altitude graph" width="600">
+  <div class="image-row">
+    <div class="image-container">
+      <h2>Altitude graph</h2>
+      <img src="altitude.png" alt="Altitude graph">
+    </div>
+    <div class="image-container">
+      <h2>Fuel flow graph</h2>
+      <img src="fuelflow.png" alt="Fuel flow graph">
+    </div>
+  </div>
+  
+  <div class="image-row">
+    <div class="image-container">
+      <h2>Vertical rate graph</h2>
+      <img src="verticalrate.png" alt="Altitude graph">
+    </div>
+    <div class="image-container">
+      <h2>Ground speed graph</h2>
+      <img src="groundspeed.png" alt="Fuel flow graph">
+    </div>
+  </div>
 
   <h2>Map of the flight - color scale by altitude</h2>
   <iframe src="map.html" width="100%" height="600" style="border:none;"></iframe>

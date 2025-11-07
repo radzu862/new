@@ -48,8 +48,23 @@
     </div>
   </div>
 
-  <h2>Map of the flight - color scale by altitude</h2>
-  <iframe src="map.html" width="100%" height="600" style="border:none;"></iframe>
+<body>
+  <h1>Flight Data Map</h1>
+  <p>Color scale by:</p>
+
+  <button onclick="showMap('altitude')">Altitude</button>
+  <button onclick="showMap('vertical_rate')">Vertical rate</button>
+  <button onclick="showMap('fuel_flow')">Fuel flow</button>
+  <button onclick="showMap('groundspeed')">Groundspeed</button>
+
+  <iframe id="mapFrame" src="map_altitude.html" width="100%" height="800"></iframe>
+
+  <script>
+    function showMap(type) {
+      document.getElementById('mapFrame').src = 'map_' + type + '.html';
+    }
+  </script>
+</body>
 
 </body>
 </html>
